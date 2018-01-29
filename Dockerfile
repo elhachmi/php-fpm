@@ -35,8 +35,8 @@ RUN     echo nl_BE.UTF-8 UTF-8 >> /etc/locale.gen && \
         echo en_US.UTF-8 UTF-8  >> /etc/locale.gen && \
         echo en_US UTF-8  >> /etc/locale.gen && \
         locale-gen
-
-RUN ls -lh . && chmod +x ./install-composer.sh && ./install-composer.sh && \
+RUN ls -lh .
+RUN chmod +x ./install-composer.sh && ./install-composer.sh && \
     curl -O -J -L https://phar.phpunit.de/phpunit.phar && \
     mv phpunit.phar /usr/local/bin/phpunit && \
     chmod +x /usr/local/bin/phpunit
