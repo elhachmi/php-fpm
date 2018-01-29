@@ -38,9 +38,8 @@ RUN     echo nl_BE.UTF-8 UTF-8 >> /etc/locale.gen && \
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php && \
-    php -r "unlink('composer-setup.php');"
-
-RUN curl -O -J -L https://phar.phpunit.de/phpunit.phar && \
+    php -r "unlink('composer-setup.php');" && \
+    curl -O -J -L https://phar.phpunit.de/phpunit.phar && \
     mv phpunit.phar /usr/local/bin/phpunit && \
     chmod +x /usr/local/bin/phpunit
 
