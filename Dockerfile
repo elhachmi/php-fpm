@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
         libcurl3-dev \
         libxml2-dev \
         libzzip-dev \
+        libbz2-dev \
         locales \
         && docker-php-ext-install bz2 iconv json mbstring mysqli pdo_mysql pdo_sqlite phar curl ftp hash session simplexml tokenizer xml xmlrpc zip \
         && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
